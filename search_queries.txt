@@ -1,0 +1,164 @@
+ACM Digital Library
+web search, downloaded as acm.bib
+
+Title:("moral foundation" OR "moral value" OR "moral foundations" OR "moral values" OR "moral sentiment" OR "morality frame" OR "morality frames" OR "moral rhetoric") OR Abstract:("moral foundation" OR "moral value" OR "moral foundations" OR "moral values" OR "moral sentiment" OR "morality frame" OR "morality frames" OR "moral rhetoric") OR Keyword:("moral foundation" OR "moral value" OR "moral foundations" OR "moral values" OR "moral sentiment" OR "morality frame" OR "morality frames" OR "moral rhetoric")
+
+192 results
+
+---------------
+
+ACL:
+downloaded anthology+abstracts.bib
+converted it to anthology+abstracts.json using bib2json.py
+used the script acl_json_search.py to search for the keyword "moral" in title or abstract.
+
+77 results
+
+---------------
+
+JCSS:
+websearch for "moral"
+downloaded as .csv and manually converted to a .bib
+
+https://link.springer.com/search?query=moral&search-within=Journal&facet-journal-id=42001
+
+18 results
+
+---------------
+
+IEEE:
+web search. selected all results and exported them ("citations" tab in pop-up) as .bib
+then, opened the file in sublime text and added newline before each @... 
+also manually replaced the bibkey with the string contained in the doi field, if it was not empty. This happened in order to have an easier time mapping the results to the old bibkeys from the old search results.
+
+("Document Title":"moral foundation" OR "Document Title":"moral value" OR "Document Title":"moral foundations" OR "Document Title":"moral values" OR "Document Title":"moral sentiment" OR "Document Title":"morality frame" OR "Document Title":"morality frames" OR "Document Title":"moral rhetoric") OR ("Abstract":"moral foundation" OR "Abstract":"moral value" OR "Abstract":"moral foundations" OR "Abstract":"moral values" OR "Abstract":"moral sentiment" OR "Abstract":"morality frame" OR "Abstract":"morality frames" OR "Abstract":"moral rhetoric") OR ("Author Keywords":"moral foundation" OR "Author Keywords":"moral value" OR "Author Keywords":"moral foundations" OR "Author Keywords":"moral values" OR "Author Keywords":"moral sentiment" OR "Author Keywords":"morality frame" OR "Author Keywords":"morality frames" OR "Author Keywords":"moral rhetoric")
+
+71 results
+
+---------------
+
+Behavior Research Methods
+web search 
+downloaded as .csv and manually converted to a .bib
+
+https://link.springer.com/search?query=%22moral+foundation%22+OR+%22moral+foundations%22+OR+%22moral+value%22+OR+%22moral+values%22+OR+%22moral+sentiment%22+OR+%22morality+frame%22+OR+%22morality+frames%22+OR+%22moral+rhetoric%22&search-within=Journal&facet-journal-id=13428
+
+16 results
+
+---------------
+
+Sage
+web search
+abstract must contain: "moral foundation" OR "moral foundations" OR "moral value" OR "moral values" OR "moral sentiment" OR "morality frame" OR "morality frames" OR "moral rhetoric"
+and keywords must contain: "content analysis" OR "text analysis" OR "discourse analysis" OR "semantic analysis" OR "machine learning" OR "deep learning" OR "NLP"
+
+https://journals.sagepub.com/action/doSearch?field1=Abstract&text1=%22moral+foundation%22+OR+%22moral+foundations%22+OR+%22moral+value%22+OR+%22moral+values%22+OR+%22moral+sentiment%22+OR+%22morality+frame%22+OR+%22morality+frames%22+OR+%22moral+rhetoric%22&field2=Keyword&text2=%22content+analysis%22+OR+%22text+analysis%22+OR+%22discourse+analysis%22+OR+%22semantic+analysis%22+OR+%22machine+learning%22+OR+%22deep+learning%22+OR+%22NLP%22&field4=AllField&text4=&publication=&Ppub=&access=
+
+5 results
+
+---------------
+
+EPJ
+
+web search
+"moral foundation" anywhere in the paper, as an advanced search is not possible
+(searching for the plural "moral foundations" does not change the results)
+(searching for "moral" returns 15 results and the extra results do not seem relevant)
+
+https://epjdatascience.springeropen.com/articles?query=%22moral+foundation%22&volume=&searchType=&tab=keyword
+
+3 results
+
+---------------
+
+KBS
+
+Corrected web search. Find articles with these terms:
+"moral foundation" OR "moral foundations" OR "moral value" OR "moral values" OR "moral sentiment" OR "morality frame" OR "morality frames" OR "moral rhetoric"
+In this journal or book title:
+Knowledge-Based Systems
+
+https://www.sciencedirect.com/search?pub=Knowledge-Based%20Systems&cid=271505&qs=%22moral%20foundation%22%20OR%20%22moral%20foundations%22%20OR%20%22moral%20value%22%20OR%20%22moral%20values%22%20OR%20%22moral%20sentiment%22%20OR%20%22morality%20frame%22%20OR%20%22morality%20frames%22%20OR%20%22moral%20rhetoric%22
+
+3 results
+
+---------------
+
+PLOS One CL
+
+web search:
+abstract:moral OR title:moral
+
+https://journals.plos.org/plosone/search?filterJournals=PLoSONE&filterSubjects=Computational%20linguistics&q=abstract%3Amoral%20OR%20title%3Amoral&page=1
+
+1 result
+
+---------------
+
+PLOS One NLP
+
+web search:
+abstract:moral OR title:moral
+
+https://journals.plos.org/plosone/search?filterJournals=PLoSONE&filterSubjects=Natural%20language%20processing&q=abstract%3Amoral%20OR%20title%3Amoral&page=1
+
+2 results
+
+---------------
+
+Computational Comm Research
+
+web search for "moral"
+https://computationalcommunication.org/ccr/search/index?query=moral&dateFromYear=&dateFromMonth=&dateFromDay=&dateToYear=&dateToMonth=&dateToDay=&authors=
+
+1 result
+
+---------------
+
+AAAI main conf
+
+web search: moral streamid:conf/aaai:
+
+https://dblp.org/search/publ?q=moral%20streamid:conf/aaai:
+
+12 results
+
+---------------
+
+AIES
+
+web search: moral streamid:conf/aies:
+
+https://dblp.org/search/publ?q=moral%20streamid:conf/aies:
+
+22 results
+
+---------------
+
+ICWSM
+
+web search: moral streamid:conf/icwsm:
+
+https://dblp.org/search/publ?q=moral%20streamid:conf/icwsm:
+
+9 results
+
+---------------
+
+NeurIPS
+
+web search: moral streamid:conf/nips:
+
+https://dblp.org/search/publ?q=moral%20streamid:conf/nips:
+
+2 results
+
+---------------
+
+ICLR
+
+web search: moral streamid:conf/iclr:
+
+https://dblp.org/search/publ?q=moral%20streamid:conf/iclr:
+
+1 result

@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moral Values Survey Form</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <style></style>
+  </head>
+  <body>
+    <h1>Moral Values Survey Form</h1>
+
+
+    <form class="form">
+
+      <div class="form-row">
+        <fieldset>
+            <legend>Please insert bibtex key</legend>
+            <p>
+            <!--<label class="form-label" for="bibkey">Insert bibtex key</label>-->
+            <input type="text" name="bibKey" id="bibKey" />
+            </p><br/> 
+            <legend>Please insert the bibtex file name</legend>
+            <p> 
+            <input type="file" name="bibtexFile" id="bibtexFile" value="./anthology.json" />
+            </p><br/> 
+            <legend>Please insert the survey data file name</legend>
+            <p> 
+            <input type="file" name="surveyFile" id="surveyFile" value="./survey_data_form.json" />
+            </p><br/> 
+        </fieldset>        
+    </div><br/>
+
+
+    <!--<input type="file" id="bibtexFile" accept=".json" /><br/>-->
+   
+    <br/>
+        <div class="title">
+        <span><b>Title:</b></span>
+        <span id="title"></span>
+      </div><br/>
+      <div class="author">
+        <span><b>Author(s):</b></span>
+        <span id="author"></span>
+      </div><br/>
+      <div class="year">
+        <span><b>Year:</b></span>
+        <span id="year"></span>
+      </div><br/>
+
+    <fieldset>
+        <div>
+            <p><b>Paper type:</b></p>
+            <input type="checkbox" id="typeResource" name="typeResource" value="typeResource"/>
+            <label for="typeResource">Resource paper</label><br>
+            
+            <input type="checkbox" id="typeExperiment" name="typeExperiment" value="typeExperiment"/>
+            <label for="typeExperiment"> Experimental paper</label><br>
+                  
+            <input type="checkbox" id="typeApplicationAI" name="typeApplicationAI" value="typeApplicationAI"/>
+            <label for="typeApplicationAI"> Morality in LMs/AI</label><br> 
+
+            <input type="checkbox" id="typeAnalysis" name="typeAnalysis" value="typeAnalysis"/>
+            <label for="typeAnalysis"> Analysis paper (CSS)</label><br>
+
+            <input type="checkbox" id="typeDemo" name="typeDemo" value="typeDemo"/>
+            <label for="typeDemo"> Demo paper</label><br>
+
+
+            <input type="checkbox" id="typeNotRelevant" name="typeNotRelevant" value="typeNotRelevant"/>
+            <label for="typeNotRelevant"> Paper not relevant for the survey</label><br>
+            <fieldset class="conditional"> 
+                <p><b>Please specify why the paper is not relevant:</b></p>
+                <input type="text" id="typeNotRelevantText" size="100" name="typeNotRelevantText" /> <br/>
+            </fieldset>    
+
+        </div><br/>
+
+        <div>
+            <p><b>Paper length:</b></p>
+            <table>
+                <tr>
+                    <td><label for="paperContentLength"> Content length</label></td>
+                    <td><label for="paperTotalLength"> Total length</label></td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="paperContentLength" name="paperContentLength"/></td>
+                    <td><input type="text" id="paperTotalLength" name="paperTotalLength"/></td>
+                </tr>
+            </table>
+        </div><br/>
+    
+    
+        <div>
+            <p><b>This paper includes:</b></p> 
+              <input type="checkbox" id="includesDictionary" name="includesDictionary" value="includesDictionary"/>
+              <label for="includesDictionary"> Creation of dictionaries</label><br/> 
+
+              <input type="checkbox" id="includesOntology" name="includesOntology" value="includesOntology"/>
+              <label for="includesOntology"> Creation of ontologies/vocabularies/linked data</label><br/>
+
+              <input type="checkbox" id="includesAnnotation" name="includesAnnotation" value="includesAnnotation"/>
+              <label for="includesAnnotation"> Creation of annotated resources</label><br/>
+              
+              <input type="checkbox" id="includesRuleBased" name="includesRuleBased" value="includesRuleBased"/>
+              <label for="includesRuleBased">Rule-based classification </label><br/>
+
+              <input type="checkbox" id="includesLogicBased" name="includesLogicBased" value="includesLogicBased"/>
+              <label for="includesLogicBased">Logic-based approaches </label><br/>
+
+              <input type="checkbox" id="includesUnsupervised" name="includesUnsupervised" value="includesUnsupervised"/>
+              <label for="includesUnsupervised"> Unsupervised or semisupervised classification </label><br/>
+            
+              <input type="checkbox" id="includesSupervised" name="includesSupervised" value="includesSupervised"/>
+              <label for="includesSupervised"> Supervised classification </label><br/> 
+
+              <input type="checkbox" id="includesLLMPrompt" name="includesLLMPrompt" value="includesLLMPrompt"/>
+              <label for="includesLLMPrompt"> LLMs with instruction learning w/o finetuning </label><br/>
+
+              <input type="checkbox" id="includesProbing" name="includesProbing" value="includesProbing"/>
+              <label for="includesProbing"> Probing LMs for moral values / improving their understanding of moral values </label><br/>              
+              
+              <input type="checkbox" id="includesAsFeat" name="includesAsFeat" value="includesAsFeat"/>
+              <label for="includesAsFeat"> Use of moral value predictions for other tasks (e.g., as features)</label><br/>
+              
+              <input type="checkbox" id="includesApplication" name="includesApplication" value="includesApplication"/>
+              <label for="includesApplication"> Applications of morality detection for computational social science / cultural analytics</label><br/>
+ 
+        </div><br/> 
+        <div>
+            <p><b>Motivation/Problem statement:</b></p>
+            <input type="text" id="paperMotivationText" size="100" name="paperMotivationText" /> <br/>
+
+            <p><b>Contribution:</b></p>
+            <input type="text" id="paperContributionText" size="100" name="paperContributionText" /> <br/> 
+
+            <p><b>Results:</b></p>
+            <input type="text" id="paperResultsText" size="100" name="paperResultsText" /> <br/>
+
+        </div>
+    </fieldset>
+  
+    <br/>    
+
+    <h3>Conceptual modelling of moral values</h3>
+    
+    <fieldset>
+        <div> 
+            <p><b>This paper uses:</b></p>
+            <input type="checkbox" name="theoryMFT" value="theoryMFT" id="theoryMFT">
+            <label for="theoryMFT"> Moral Foundations Theory</label><br/>
+
+            <fieldset class="conditional"> 
+                <p><b>Number of MF used in the paper:</b></p>
+                <input type="radio" id="numMF5" name="numMF" value="numMF5"/>
+                <label for="numMF5"> 5 MF: CareHarm, FairnessCheating, LoyaltyBetrayal, AuthoritySubversion, PurityDegradation</label><br/><br/>
+                        
+                <input type="radio" id="numMF10" name="numMF" value="numMF10"/>
+                <label for="numMF10"> 10 MF: Care, Harm, Fairness, Cheating, Loyalty, Betrayal, Authority, Subversion, Purity, Degradation</label><br/><br/>
+                        
+                <input type="radio" id="numMF6Liberty" name="numMF" value="numMF6Liberty"/>
+                <label for="numMF6Liberty"> 6 MF: schema also includes Liberty</label><br/><br/>
+                        
+                <input type="radio" id="numMF12Liberty" name="numMF" value="numMF12Liberty"/>
+                <label for="numMF12Liberty"> 12 MF:  schema also includes Liberty</label><br/><br/>
+                        
+                <input type="radio" id="numMF6" name="numMF" value="numMF6"/>
+                <label for="numMF6"> 6 MF: Fairness has been split into 2 values</label><br/><br/>
+                        
+                <input type="radio" id="numMF12" name="numMF" value="numMF12"/>
+                <label for="numMF12"> 12 MF:  Fairness has been split into 2 values</label><br/><br/>
+                        
+                <input type="radio" id="numMF7" name="numMF" value="numMF7"/>
+                <label for="numMF7"> 7 MF: Fairness has been split + Liberty </label><br/><br/>
+                        
+                <input type="radio" id="numMF14" name="numMF" value="numMF14"/>
+                <label for="numMF14"> 14 MF:  Fairness has been split + Liberty</label><br/><br/>  
+                        
+                <input type="radio" id="numMFOwn" name="numMF" value="numMFOwn"/>
+                <label for="numMFOwn">MFOwn: MFT with additional, newly defined MFs </label><br/><br/>  
+                        
+                <input type="radio" id="numMFNotSpecified" name="numMF" value="numMFNotSpecified"/>
+                <label for="numMFNotSpecified"> not specified </label><br/><br/>  
+            </fieldset> 
+            
+            <input type="checkbox" name="theoryHumanval" value="theoryHumanval" id="theoryHumanval">
+            <label for="theoryHumanval"> Schwartz' Human Values</label><br/>
+                    
+            <input type="checkbox" name="theoryOther" value="theoryOther" id="theoryOther">
+            <label for="theoryOther"> another existing theory of moral values</label><br/>
+            <fieldset class="conditional"> 
+                &nbsp; &nbsp;  &nbsp;<label for="theoryOtherText">Theory(/ies) used in the paper (comma-separated)</label>
+                <input type="text" id="theoryOtherText" name="theoryOtherText" /> 
+            </fieldset>	
+            
+            <input type="checkbox" name="theoryOwn" value="theoryOwn" id="theoryOwn">
+            <label for="theoryOwn">a new/own theory of moral values</label><br/>
+            <fieldset class="conditional"> 
+                &nbsp; &nbsp; &nbsp;<label for="theoryOwnText">Name of the new theory</label>
+                <input type="text" id="theoryOwnText" name="theoryOwnText" /> 
+            </fieldset>	
+
+            <input type="checkbox" name="theoryNone" value="theoryNone" id="theoryNone">
+            <label for="theoryNone"> no theory </label><br/><br/>
+                     
+        </div> 
+
+        <div><p><b>Definition of moral values:</b></p>
+            <input type="radio" id="definitionYes" name="definition" value="definitionYes"/>
+            <label for="definitionYes"> Paper includes a precise, theory-based definition for the concept of moral values/morality <br/>&nbsp; &nbsp; &nbsp; (more than just a reference to the theory)</label><br/> 
+            <input type="radio" id="definitionVague" name="definition" value="definitionVague"/>
+            <label for="definitionVague"> Paper includes a vague description or reference </label><br/> 
+            <input type="radio" id="definitionNo" name="definition" value="definitionNo"/>
+            <label for="definitionNo"> Paper includes no definition at all </label><br/> 
+
+        </div><br/> 
+    
+        <div>
+            <p><b>Level of analysis:</b></p>
+            <table>
+                <tr>
+                    <td align="center"><label for="unitDocument">document </label></td> <td>&nbsp;</td>
+                    <td align="center"><label for="unitSegment">text segment </label></td> <td>&nbsp;</td>
+                    <td align="center"><label for="unitSentence">sentence </label></td> <td>&nbsp;</td>
+                    <td align="center"><label for="unitToken">tokens </label></td><td>&nbsp;</td>
+                    <td align="center"><label for="unitFrame">entities/frames </label></td>
+                </tr>
+                <tr>
+                   <td align="center"><input type="checkbox" name="unitDocument" value="unitDocument" id="unitDocument"  /></td><td></td>						
+                    <td align="center"><input type="checkbox" name="unitSegment" value="unitSegment" id="unitSegment"  /></td><td></td> 
+                    <td align="center"><input type="checkbox" name="unitSentence" value="unitSentence" id="unitSentence"  /></td><td></td> 
+                    <td align="center"><input type="checkbox" name="unitToken" value="unitToken" id="unitToken" /></td><td></td> 
+                    <td align="center"><input type="checkbox" name="unitFrame" value="unitFrame" id="unitFrame" /></td><td></td> 
+                </tr>
+            </table>
+            <br/>
+        </div>
+ 
+        <div>
+            <p><b>Main purpose for modelling moral values:</b></p>
+            <input type="checkbox" id="goalFraming" name="goalFraming" value="goalFraming"/>
+            <label for="goalFraming"><b>Framing: </b>to investigate (political) framing/rhetoric</label><br/>  
+
+            <input type="checkbox" id="goalPerson" name="goalPerson" value="goalPerson"/>
+            <label for="goalPerson"><b>Moral values: </b>to analyse the moral values of a person/group/society/culture</label><br/>  
+            
+            <input type="checkbox" id="goalSentiment" name="goalSentiment" value="goalSentiment"/>
+            <label for="goalSentiment"><b>Moral stance: </b>to analyse the moral sentiment/stance towards a person/group</label><br/>  
+            
+            <input type="checkbox" id="goalComparison" name="goalComparison" value="goalComparison"/>
+            <label for="goalComparison"><b>Comparison: </b>comparison of moral values to other concepts (e.g., stance, emotion)</label><br/>  
+            
+            <input type="checkbox" id="goalTheoryMoral" name="goalTheoryMoral" value="goalTheoryMoral"/>
+            <label for="goalTheoryMoral"><b>Theory (moral): </b>evaluate / test / improve a theory on moral values (e.g., MFT)</label><br/>  
+
+            <input type="checkbox" id="goalTheoryOther" name="goalTheoryOther" value="goalTheoryOther"/>
+            <label for="goalTheoryOther"><b>Theory (other): </b>evaluate / test / improve another theory (Mediatization Theory)</label><br/>  
+
+            <input type="checkbox" id="goalAI" name="goalAI" value="goalAI"/>
+            <label for="goalAI"><b>AI: </b>integration of moral values in AI systems/applications</label><br/>  
+
+        </div> <br/>
+    </fieldset>  
+    <br/>
+
+        
+    
+    <h3>Data</h3>
+    
+    <fieldset> 
+        <div>
+            <p><b>Languages used in the paper:</b></p>
+            <input type="checkbox" id="langEn" name="langEn" value="langEn"> 
+            <label for="langEn">English</label>
+            <br/>
+            <input type="checkbox" id="langOther" name="langOther" value="langOther">
+            <label for="langOther">Other</label>
+            <fieldset class="conditional"> 
+                <label for="langOther">Specify other languages (comma-separated)</label>
+                <input type="text" id="langOther" name="langOther" />  
+            </fieldset> 
+            <br/>
+            <input type="checkbox" id="langNotSpecified" name="langNotSpecified" value="langNotSpecified"> 
+            <label for="langNotSpecified">not specified</label>
+            <br/>
+            
+        </div>
+    
+        <div>
+            <p><b>Type of data used in the paper:</b></p> 
+            <input type="checkbox" id="dataSM" name="dataSM" value="dataSM"/>
+            <label for="dataSM"> Social media</label><br/>
+
+            <fieldset class="conditional"> 
+                <input type="checkbox" id="dataSMTwitter" name="dataSMTwitter" value="dataSMTwitter"/>
+                <label for="dataSMTwitter">Twitter</label><br/>
+                <input type="checkbox" id="dataSMReddit" name="dataSMReddit" value="dataSMReddit"/>
+                <label for="dataSMReddit">Reddit</label><br/>
+                <input type="checkbox" id="dataSMFacebook" name="dataSMFacebook" value="dataSMFacebook"/>
+                <label for="dataSMFacebook">Facebook</label><br/>
+                <input type="checkbox" id="dataSMOther" name="dataSMOther" value="dataSMOther"/>
+                <label for="dataSMOther">Other</label><br/>
+            </fieldset>
+
+            <input type="checkbox" id="dataNews" name="dataNews" value="dataNews"/>
+            <label for="dataNews"> Newswire</label><br/>
+                  
+            <input type="checkbox" id="dataOther" name="dataOther" value="dataOther"/>
+            <label for="dataOther"> Other</label><br/>
+            <fieldset class="conditional"> 
+                <label for="dataOtherText">Please specify the domain(s)(comma-separated)</label>
+                <input type="text" id="dataOtherText" name="dataOtherText" /> 
+            </fieldset>
+        </div> 
+
+        <div>
+            <p><b>Topic domain of the data:</b></p> 
+
+            <input type="radio" id="dataDomainPolitics" name="dataDomain" value="dataDomainPolitics"> 
+            <label for="dataDomainPolitics">Politics </label>
+            <br/>
+            <input type="radio" id="dataDomainScience" name="dataDomain" value="dataDomainScience"> 
+            <label for="dataDomainScience">Science </label>
+            <br/>
+            <input type="radio" id="dataDomainLaw" name="dataDomain" value="dataDomainLaw"> 
+            <label for="dataDomainLaw">Law </label>
+            <br/>
+            <input type="radio" id="dataDomainReligion" name="dataDomain" value="dataDomainReligion"> 
+            <label for="dataDomainReligion">Religion </label>
+            <br/>
+            <input type="radio" id="dataDomainFiction" name="dataDomain" value="dataDomainFiction"> 
+            <label for="dataDomainFiction">Fiction </label>
+            <br/>  
+
+            <input type="radio" id="dataDomainOther" name="dataDomain" value="dataDomainOther"> 
+            <label for="dataDomainOther">Other </label>
+            <br/>
+            <fieldset class="conditional"> 
+                <label for="dataDomainOtherText">Please list the topic domain(s) (comma-separated)</label><br/>
+                <input type="text" name="dataDomainOtherText" id="dataDomainOtherText" size="40" /> 
+            </fieldset> 
+            
+
+            <!--<input type="radio" id="dataDomainMixed" name="dataDomain" value="dataDomainMixed"> 
+            <label for="dataDomainMixed">Mixed </label>
+            <br/>
+            <fieldset class="conditional"> 
+                <label for="dataDomainMixedText">Please specify the topic domain</label><br/>
+                <input type="text" name="dataDomainMixedText" id="dataDomainMixedText" size="40" /> 
+            </fieldset>  -->
+
+        </div>
+
+        <div>
+            <p><b>Corpora / resources used in the paper (excluding baselines):</b></p>
+            
+            <input type="checkbox" id="resourcesDict" name="resourcesDict" value="resourcesDict"> 
+            <label for="resourcesDict">Moral Foundations Dictionary (e.g., MFD, extended MFD, etc.)</label>
+            <br/>  
+            <input type="checkbox" id="resourcesDictValues" name="resourcesDictValues" value="resourcesDictValues"> 
+            <label for="resourcesDictValues">Values Lexicon (Wilson et al)</label>
+            <br/>  
+            <input type="checkbox" id="resourcesMFTC" name="resourcesMFTC" value="resourcesMFTC"> 
+            <label for="resourcesMFTC">Moral Foundations Twitter Corpus</label>
+            <br/> 
+            <input type="checkbox" id="resourcesMFRC" name="resourcesMFRC" value="resourcesMFRC"> 
+            <label for="resourcesMFRC">Moral Foundations Reddit Corpus</label>
+            <br/> 
+            <input type="checkbox" id="resourcesMFQuestionnaire" name="resourcesMFQuestionnaire" value="resourcesMFQuestionnaire"> 
+            <label for="resourcesMFQuestionnaire">Moral Foundations Questionnaire</label>
+            <br/> 
+            <input type="checkbox" id="resourcesSocialChemistry" name="resourcesSocialChemistry" value="resourcesSocialChemistry"> 
+            <label for="resourcesSocialChemistry">Social Chemistry 101 (Forbes et al)</label>
+            <br/> 
+            <input type="checkbox" id="resourcesScruples" name="resourcesScruples" value="resourcesScruples"> 
+            <label for="resourcesScruples">Scruples (Lourie et al)</label>
+            <br/> 
+            <input type="checkbox" id="resourcesMoralStories" name="resourcesMoralStories" value="resourcesMoralStories"> 
+            <label for="resourcesMoralStories">Moral Stories (Emelin et al)</label>
+            <br/> 
+            <input type="checkbox" id="resourcesEthics" name="resourcesEthics" value="resourcesEthics"> 
+            <label for="resourcesEthics">Ethics (Hendrycks et al)</label>
+            <br/>  
+            <input type="checkbox" id="resourcesNorms" name="resourcesNorms" value="resourcesNorms"> 
+            <label for="resourcesNorms">Norms (Lourie et al)</label>
+            <br/> 
+            <input type="checkbox" id="resourcesMCM" name="resourcesMCM" value="resourcesMCM"> 
+            <label for="resourcesMCM">MCM: Moral Choice Machine (Jentzsch et al)</label>
+            <br/> 
+            <input type="checkbox" id="resourcesMoralStrength" name="resourcesMoralStrength" value="resourcesMoralStrength"> 
+            <label for="resourcesMoralStrength">MoralStrength (Araque et al)</label>
+            <br/> 
+            <input type="checkbox" id="resourcesSemAxis" name="resourcesSemAxis" value="resourcesSemAxis"> 
+            <label for="resourcesSemAxis">SemAxis (An et al)</label>
+            <br/>  
+            <input type="checkbox" id="resourcesHHH" name="resourcesHHH" value="resourcesHHH"> 
+            <label for="resourcesHHH">HHH: Helpful, Honest,
+                & Harmless (Askell et al)</label>
+            <br/> 
+            <input type="checkbox" id="resourcesTrustfulQA" name="resourcesTrustfulQA" value="resourcesTrustfulQA"> 
+            <label for="resourcesTrustfulQA">Trustful QA (Lin et al)</label>
+            <br/> 
+            
+            <input type="checkbox" id="resourcesOther" name="resourcesOther" value="resourcesOther"> 
+            <label for="resourcesOther">Other</label>
+            <br/>                 
+            <fieldset class="conditional"> 
+                <label for="resourcesOtherText">Please list the resources (comma-separated)</label><br/>
+                <input type="text" name="resourcesOtherText" id="resourcesOtherText" size="40" /> <br/> <br/>
+            </fieldset> 
+        </div>
+    </fieldset>  
+
+
+
+    <h3>Resource papers</h3>
+
+    <fieldset>
+        <input type="radio" name="resource" value="resourceYes" id="resourceYes"  />						
+        <label for="resourceYes"> yes</label> <br/>
+            
+        <fieldset class="conditional"> 
+            <div>
+                <p><b>What is the size of the resource?</b></p> 
+
+                &nbsp; &nbsp; &nbsp;<label for="annotSizeText">Please list as NUMBER UNIT, e.g., 500 documents / 10000 tokens / 2000 sentences / 100 frames / unknown</label><br/>
+                &nbsp; &nbsp; &nbsp;<input type="text" id="annotSizeText"  name="annotSizeText" /> 
+                <br/><br/>
+            </div>
+
+            <div>
+                <p><b>What is the annotation setup?</b></p> 
+
+                <input type="radio" id="annotCrowd" name="annotSetup" value="annotCrowd"/>    
+                <label for="annotCrowd">crowdsourcing setup</label><br/>
+
+                <input type="radio" id="annotTrained" name="annotSetup" value="annotTrained"/>    
+                <label for="annotTrained">trained annotators</label><br/>
+
+                <input type="radio" id="annotMixed" name="annotSetup" value="annotMixed"/>    
+                <label for="annotMixed">both (trained annotators and crowdworkers)</label><br/>
+
+                <input type="radio" id="annotNoInfo" name="annotSetup" value="annotNoInfo"/>    
+                <label for="annotNoInfo">no information on annotators</label><br/>
+
+                <input type="radio" id="annotNoAnnot" name="annotSetup" value="annotNoAnnot"/>    
+                <label for="annotNoAnnot">no annotation included</label><br/>
+            </div>
+
+
+            <div>
+                <p><b>Does the paper include information about the annotators moral/political/... views?</b></p> 
+                <input type="radio" id="annotViewsYes" name="annotViews" value="annotViewsYes"/>    
+                <label for="annotViewsYes">yes</label><br/>
+
+                <input type="radio" id="annotViewsNo" name="annotViews" value="annotViewsNo"/>    
+                <label for="annotViewsNo">no</label><br/>
+
+                <input type="radio" id="annotViewsNotRelevant" name="annotViews" value="annotViewsNotRelevant"/>    
+                <label for="annotViewsNotRelevant">not relevant</label><br/>
+            </div>
+
+
+            <div>
+                <p><b>Are annotation schema descriptions/guidelines available?</b></p> 
+            
+                <input type="radio" id="AnnotSchemaYes" name="AnnotSchema" value="AnnotSchemaYes"/>    
+                <label for="AnnotSchemaYes">yes</label><br/>  
+    
+                <fieldset class="conditional">                            
+                    <div>
+                        <p><b>Length of annotation guidelines/schema description:</b></p>
+                        <table>
+                        <tr>
+                            <td align="center"><label for="AnnotSchemaLen1">less than 2 pages </label></td> <td>&nbsp;&nbsp;</td>
+                            <td align="center"><label for="AnnotSchemaLen2">2-3 pages </label></td> <td>&nbsp;</td>
+                            <td align="center"><label for="AnnotSchemaLen4">4-5 pages </label></td> <td>&nbsp;</td>
+                            <td align="center"><label for="AnnotSchemaLen6">6-10 pages </label></td> <td>&nbsp;</td>
+                            <td align="center"><label for="AnnotSchemaLen10">&gt;10 pages</label></td>
+                        </tr>
+                        <tr>
+                           <td align="center"><input type="radio" name="AnnotSchemaLen" value="AnnotSchemaLen1" id="AnnotSchemaLen1"  /></td><td></td>						
+                            <td align="center"><input type="radio" name="AnnotSchemaLen" value="AnnotSchemaLen2" id="AnnotSchemaLen2"  /></td><td></td> 
+                            <td align="center"><input type="radio" name="AnnotSchemaLen" value="AnnotSchemaLen4" id="AnnotSchemaLen4"  /></td><td></td> 
+                            <td align="center"><input type="radio" name="AnnotSchemaLen" value="AnnotSchemaLen6" id="AnnotSchemaLen6"  /></td><td></td> 
+                            <td align="center"><input type="radio" name="AnnotSchemaLen" value="AnnotSchemaLen10" id="AnnotSchemaLen10" /></td><td></td> 
+                        </tr>
+                        </table>
+                        <br/>
+                    </div>
+                </fieldset>	
+                
+                <input type="radio" id="AnnotSchemaNo" name="AnnotSchema" value="AnnotSchemaNo"/>    
+                <label for="AnnotSchemaNo">no</label><br/>     
+                
+                <input type="radio" id="AnnotSchemaNotRelevant" name="AnnotSchema" value="AnnotSchemaNotRelevant"/>    
+                <label for="AnnotSchemaNotRelevant">not relevant</label><br/>     
+            </div>
+
+
+            <div>
+                <p><b>Does the paper report IAA?</b></p> 
+            
+                <input type="radio" id="IAAYes" name="IAA" value="IAAYes"/>    
+                <label for="IAAYes">yes</label><br/>
+                <fieldset class="conditional"> 
+                    <br/>
+                    &nbsp; &nbsp; &nbsp;<label for="annotIAATypeText">Type(s) of annotation? (comma-separated)<br/>
+                    &nbsp; &nbsp; &nbsp;e.g.: MF, MF roles, HV (for Schwartz Human Values), ...</label><br/>
+                    &nbsp; &nbsp; &nbsp;<input type="text" id="annotIAATypeText" name="annotIAATypeText" />  <br/><br/>            
+
+                    &nbsp; &nbsp; &nbsp;<label for="annotIAAScoreText">IAA score (comma-separated)</label><br/>
+                    &nbsp; &nbsp; &nbsp;<input type="text" id="annotIAAScoreText" name="annotIAAScoreText" /> 
+                    <br/><br/>
+
+                    &nbsp; &nbsp; &nbsp;<label for="annotIAAMetricText">Measure (comma-separated)</label><br/>
+                    &nbsp; &nbsp; &nbsp;<input type="text" id="annotIAAMetricText" name="annotIAAMetricText" /> 
+                    <br/><br/>
+    
+                </fieldset>	 
+
+                <input type="radio" id="IAANo" name="IAA" value="IAANo"/>
+                <label for="IAANo">no</label><br/> 
+                <input type="radio" id="IAANotRelevant" name="IAA"  value="IAANotRelevant"/>
+                <label for="IAANotRelevant">not relevant</label><br/> 
+            </div>
+
+            <div>
+                <p><b>Does the paper include some kind of error analysis for the annotations?</b></p>
+
+                <input type="radio" id="AnnotErrAnalysisYes" name="AnnotErrAnalysis" value="AnnotErrAnalysisYes"/>
+                <label for="AnnotErrAnalysisYes">yes</label><br/>
+            
+                <input type="radio" id="AnnotErrAnalysisRudimentary" name="AnnotErrAnalysis" value="AnnotErrAnalysisRudimentary"/>
+                <label for="AnnotErrAnalysisRudimentary">rudimentary </label><br/>
+
+                <input type="radio" id="AnnotErrAnalysisNo" name="AnnotErrAnalysis" value="AnnotErrAnalysisNo"/>
+                <label for="AnnotErrAnalysisNo">no</label><br/>
+
+                <input type="radio" id="AnnotErrAnalysisNotRelevant" name="AnnotErrAnalysis" value="AnnotErrAnalysisNotRelevant"/>
+                <label for="AnnotErrAnalysisNotRelevant">not relevant</label><br/>
+        
+            </div>
+
+
+            <div>
+                <p><b>Is the resource presented in the paper available?</b></p>
+                
+                <input type="radio" id="AnnotResourceAvailableYes" name="AnnotResourceAvailable" value="AnnotResourceAvailableYes"/>
+                <label for="AnnotResourceAvailableYes">yes</label><br/>            
+                <fieldset class="conditional">  
+                    <label for="AnnotResourceAvailableYesURL">URL for the resource</label>
+                    <input type="text" size="50" id="AnnotResourceAvailableYesURL" name="AnnotResourceAvailableYesURL" />  <br/> <br/>
+     
+                    <label for="AnnotResourceAvailableYesComment" name="AnnotResourceAvailableYesComment">Comment (optional)</label>
+                    &nbsp;<input type="text" size="50"  id="AnnotResourceAvailableYesComment" />  
+                </fieldset> 
+            
+                <input type="radio" id="AnnotResourceAvailablePartly" name="AnnotResourceAvailable" value="AnnotResourceAvailablePartly"/>
+                <label for="AnnotResourceAvailablePartly">partly </label><br/>
+                <fieldset class="conditional"> 
+                    <br/>  
+                    <label for="AnnotResourceAvailablePartlyURL">URL for the resource</label>
+                    <input type="text" size="50" id="AnnotResourceAvailablePartlyURL" name="AnnotResourceAvailablePartlyURL" />  <br/> <br/>  
+    
+                    &nbsp; <label for="AnnotResourceAvailablePartlyComment" name="AnnotResourceAvailablePartlyComment">Comment (optional)</label>   
+                    <input type="text" size="50"  id="AnnotResourceAvailablePartlyComment" />  
+                </fieldset>
+            
+                <input type="radio" id="AnnotResourceAvailableNo" name="AnnotResourceAvailable" value="AnnotResourceAvailableNo"/>
+                <label for="AnnotResourceAvailableNo">no </label><br/> 
+
+            </div>            
+        </fieldset>
+
+
+        
+        <input type="radio" name="resource" value="resourceNo" id="resourceNo"  />						
+        <label for="resourceNo">no </label> <br/>
+    </fieldset>  
+    <br/>
+
+
+
+    <h3>Does the paper include experiments?</h3>
+
+    <fieldset>
+        <input type="radio" name="experiment" value="experimentYes" id="experimentYes"  />						
+        <label for="experimentYes"> yes</label> <br/>
+            
+        <fieldset class="conditional"> 
+            <div>
+                <p><b>Which method has been used?</b></p>
+                <input type="checkbox" id="ruleML" name="ruleML" value="ruleML"/>
+                <label for="ruleML">rule-based methods</label><br/>
+
+                <input type="checkbox" id="featML" name="featML" value="featML"/>
+                <label for="featML">Feature-based ML (e.g., SVM, MaxEnt, ...)</label><br/>
+
+                <input type="checkbox" id="logicML" name="logicML" value="logicML"/>
+                <label for="logicML">Logic-based approaches (e.g., Statistical/Deep Relational Learning, Markov Logic Networks, ...)</label><br/>
+
+                <input type="checkbox" id="expTransformers" name="expTransformers" value="expTransformers"/>
+                <label for="expTransformers">finetuned Transformers</label><br/>
+                <fieldset class="conditional"> 
+                    &nbsp; &nbsp; &nbsp;<label for="expTransformerText">Please list the models (comma-separated)</label>
+                    <input type="text" id="expTransformerText" name="expTransformerText" /> 
+                </fieldset>
+
+                <input type="checkbox" id="expReinforcement" name="expReinforcement" value="expReinforcement"/>
+                <label for="expReinforcement">Reinforcement Learning</label><br/>
+            
+                <input type="checkbox" id="expLlm" name="expLlm" value="expLlm"/>
+                <label for="expLlm">LLMs w/o fine-tuning (zero-/few-shot; instruction learning)</label><br/> 
+                <fieldset class="conditional"> 
+                    &nbsp; &nbsp; &nbsp;<label for="expLlmText">Please specify the LLM model(s) (comma-separated)</label>
+                    <input type="text" id="expLlmText" name="expLlmText" /> 
+                </fieldset>
+            
+                <input type="checkbox" id="semiML" name="semiML" value="semiML"/>
+                <label for="semiML">Semi-supervised ML</label><br/> 
+                <fieldset class="conditional"> 
+                    &nbsp; &nbsp; &nbsp;<label for="semiMLText">Please specify the  method(s) (comma-separated)</label>
+                    <input type="text" id="semiMLText" name="semiMLText" /> 
+                </fieldset>
+
+                <input type="checkbox" id="unsuperML" name="unsuperML" value="unsuperML"/>
+                <label for="unsuperML">Unsupervised ML</label><br/> 
+                <fieldset class="conditional"> 
+                    &nbsp; &nbsp; &nbsp;<label for="unsuperMLText">Please specify the method(s) (comma-separated)</label>
+                    <input type="text" id="unsuperMLText" name="unsuperMLText" /> 
+                </fieldset>
+
+                <input type="checkbox" id="expOther" name="expOther" value="expOther"/>
+                <label for="expOther">Other</label><br/>
+                <fieldset class="conditional"> 
+                    &nbsp; &nbsp; &nbsp;<label for="expOtherText">Please specify the    method(s) (comma-separated)</label>
+                    <input type="text" id="expOtherText" name="expOtherText" /> 
+                </fieldset>	
+
+
+                <input type="checkbox" id="expNotRelevant" name="expNotRelevant" value="expNotRelevant"/>
+                <label for="expNotRelevant">not relevant</label><br/>
+            </div>
+
+
+            <div>
+                <p><b>Does the paper include some kind of error analysis for the experiments?</b></p>
+                <input type="radio" id="ExpErrAnalysisYes" name="ExpErrAnalysis" value="ExpErrAnalysisYes"/>
+                <label for="ExpErrAnalysisYes">yes</label><br/>
+            
+                <input type="radio" id="ExpErrAnalysisRudimentary" name="ExpErrAnalysis"   value="ExpErrAnalysisRudimentary"/>
+                <label for="ExpErrAnalysisRudimentary">rudimentary informative</label><br/>
+
+                <input type="radio" id="ExpErrAnalysisNo" name="ExpErrAnalysis" value="ExpErrAnalysisNo"/>
+                <label for="ExpErrAnalysisNo">no</label><br/>
+
+                <input type="radio" id="ExpErrAnalysisNotRelevant" name="ExpErrAnalysis" value="ExpErrAnalysisNotRelevant"/>
+                <label for="ExpErrAnalysisNotRelevant">not relevant</label><br/>
+
+                <p><b>Does the data include (or the paper define) train/dev/test splits so that others can compare results?</b></p>
+                    
+                <input type="radio" name="replicTrainTest" value="replicTrainTestYes" id="replicTrainTestYes"  />     
+                <label for="replicTrainTestYes">yes </label> <br/>
+    
+                <input type="radio" name="replicTrainTest" value="replicTrainTestAmbig" id="replicTrainTestAmbig"  />
+                <label for="replicTrainTestAmbig">yes, but there's some ambiguity </label> <br/>
+    
+                <input type="radio" name="replicTrainTest" value="replicTrainTestNo" id="replicTrainTestNo"  />
+                <label for="replicTrainTestNo">no </label>  <br/>
+    
+                <input type="radio" name="replicTrainTest" value="replicTrainTestNotRelevant" id="replicTrainTestNotRelevant"  />
+                <label for="replicTrainTestNotRelevant">not relevant </label> 
+            </div>
+    
+            <div>
+                <p><b>Are the gold labels clearly defined or do they have to be infered? (only relevant for supervised ML)</b><p>
+                
+                <input type="radio" name="replicGold" value="replicGoldClear" id="replicGoldClear"  />						
+                <label for="replicGoldClear"> clear </label> <br/>
+                <input type="radio" name="replicGold" value="replicGoldAmbig" id="replicGoldAmbig"  /> 
+                <label for="replicGoldAmbig"> defined but there's some ambiguity how to infer the gold labels</label>  <br/>
+                <input type="radio" name="replicGold" value="replicGoldUnclear" id="replicGoldUnclear"  />
+                <label for="replicGoldUnclear"> not clear </label>  <br/>
+                <input type="radio" name="replicGold" value="replicGoldNotRelevant" id="replicGoldNotRelevant"  />
+                <label for="replicGoldNotRelevant"> not relevant </label>  <br/>
+            </div>	
+        </fieldset>
+        <input type="radio" name="experiment" value="experimentNo" id="experimentNo"  />						
+        <label for="experimentNo"> no</label> <br/>
+    </fieldset>  
+    <br/>
+
+
+
+    <h3>Does the paper include an analysis?</h3>
+    <fieldset> 
+
+        <div>
+            <input type="radio" name="analysis" value="analysisYes" id="analysisYes"  />						
+            <label for="analysisYes"> yes</label> <br/>
+            <fieldset class="conditional"> 
+                <div>
+                    <p><b>Research field / background of the paper</b></p>
+        
+                    <input type="radio" name="analysisField" value="analysisFieldPolitics" id="analysisFieldPolitics"  />						
+                    <label for="analysisFieldPolitics"> Politics/Social Science</label> <br/>
+        
+                    <input type="radio" name="analysisField" value="analysisFieldMedia" id="analysisFieldMedia"  />						
+                    <label for="analysisFieldMedia">Media & Communication Studies</label> <br/>
+        
+                    <input type="radio" name="analysisField" value="analysisFieldPsychology" id="analysisFieldPsychology"  />						
+                    <label for="analysisFieldPsychology"> Psychology</label> <br/>
+        
+                    <input type="radio" name="analysisField" value="analysisFieldOther" id="analysisFieldOther"  />						
+                    <label for="analysisFieldOther"> Other</label> <br/>
+                    <fieldset class="conditional"> 
+                        <br/>
+                        <label for="analysisFieldOtherText">Please specify the research field</label>
+                        <input type="text" name="analysisFieldOtherText" id="analysisFieldOtherText" size="50" /> <br/> <br/>
+                    </fieldset> <br/>
+                </div> 
+
+                <div>
+                    <p><b>The analysis includes:</b></p>
+
+                    <input type="radio" name="analysisType" value="analysisExplore" id="analysisExplore" />     
+                    <label for="analysisExplore">data exploration / visualisation </label> <br/> 
+ 
+                    <input type="radio" name="analysisType" value="analysisRQ" id="analysisRQ"  />     
+                    <label for="analysisRQ">explicitly formulated RQs </label><br/> 
+
+                    <input type="radio" name="analysisType" value="analysisHypo" id="analysisHypo" />     
+                    <label for="analysisHypo">hypothesis testing (with significance test) </label><br/>    
+
+                    <input type="radio" name="analysisType" value="analysisNotRelevant" id="analysisNotRelevant" />     
+                    <label for="analysisNotRelevant">not relevant </label><br/>          
+                </div>   
+            </fieldset>
+            <input type="radio" name="analysis" value="analysisNo" id="analysisYes"  />						
+            <label for="analysisNo">no </label> <br/>
+        </div>
+
+    </fieldset>  
+    <br/>
+
+
+
+    <h3>Replicability & Validation</h3>
+
+    <fieldset>
+        <div>
+            <p><b>Is the data used in the paper (freely) available?</b></p> 
+            <input type="radio" name="dataAvail" value="dataAvailYes" id="dataAvailYes" /> 
+            <label for="dataAvailYes">yes </label> 		
+            <fieldset class="conditional"> 
+               <br/>
+               <label for="dataYesUrlText">URL(s) for data set (comma-separated)</label>
+               <input type="text" name="dataYesUrlText" id="dataYesUrlText" size="50" /> <br/> <br/>
+
+               <label for="dataYesCommentText">Comment (optional)</label>
+               <input type="text" name="dataYesCommentText" size="50" id="dataYesCommentText" /> 
+               <br/>
+           </fieldset>
+           <br/>
+        </div>
+
+        <div>  
+            <input type="radio" name="dataAvail" value="dataAvailPartly" id="dataAvailPartly"  /> 
+            <label for="dataAvailPartly">partly </label> 
+            <fieldset class="conditional"> 
+               <br/>
+               <label for="dataPartlyUrlText">URL for data set</label>
+               <input type="text" size="50" id="dataPartlyUrlText" name="dataPartlyUrlText" />  <br/> <br/>
+
+               <label for="dataPartlyCommentText" name="dataPartlyCommentText">Comment (optional)</label>
+               <input type="text" size="50"  id="dataPartlyCommentText" /> 
+               <br/>
+           </fieldset>
+           <br/>	
+           
+           <input type="radio" name="dataAvail" value="dataAvailNo" id="dataAvailNo" />
+           <label for="dataAvailNo">no </label> 
+           <br/>
+           
+           <input type="radio" name="dataAvail" value="dataAvailNoInfo" id="dataAvailNoInfo" />
+           <label for="dataAvailNoInfo">no information </label> 
+           <br/>
+           
+           <input type="radio" name="dataAvail" value="dataAvailNotRelevant" id="dataAvailNotRelevant" />
+           <label for="dataAvailNotRelevant">not relevant / no additional data used </label> 
+           <br/>
+        </div> 
+    
+        <div>
+            <p><b>Preprocessing: Does the paper describe how the data has been preprocessed / filtered (or does it include the code for preprocessing)?</b><p>
+            <input type="radio" name="replicPreproc" value="replicPreprocClear" id="replicPreprocClear"  />						
+            <label for="replicPreprocClear">yes, paper includes clear description or code for preprocessing </label> <br/>
+
+            <input type="radio" name="replicPreproc" value="replicPreprocAmbig" id="replicPreprocAmbig"  /> 
+            <label for="replicPreprocAmbig">yes but there's some ambiguity, not possible to replicate</label>  <br/>
+
+            <input type="radio" name="replicPreproc" value="replicPreprocUnclear" id="replicPreprocUnclear"  />
+            <label for="replicPreprocUnclear">unclear / no information given </label>  <br/>
+
+            <input type="radio" name="replicPreproc" value="replicPreprocNotRelevant" id="replicPreprocNotRelevant"  />
+            <label for="replicPreprocNotRelevant">not relevant </label>  <br/>
+        </div>  
+
+        <div>
+            <p><b>Is the code available?</b></p>
+            <input type="radio" name="replicCode" value="replicCodeYes" id="replicCodeYes"  />
+            <label for="replicCodeYes">yes</label>  <br/>
+            <fieldset class="conditional"> 
+                &nbsp; &nbsp; &nbsp;<label for="replicCodeText">Please insert the URL</label>
+                <input type="text" id="replicCodeText" name="replicCodeText" /> 
+            </fieldset>
+            <input type="radio" name="replicCode" value="replicCodeNo" id="replicCodeNo"  />
+            <label for="replicCodeNo">no</label>  <br/>
+
+            <input type="radio" name="replicCode" value="replicCodeNotRelevant" id="replicCodeNotRelevant"  />
+            <label for="replicCodeNotRelevant">not relevant</label>  <br/>
+        </div>
+
+
+        <div>  
+            <p><b>The paper includes validation through:</b></p>
+    
+            <input type="checkbox" name="validationHypothesis" value="validationHypothesis" id="validationHypothesis" />     
+            <label for="validationHypothesis">hypothesis testing</label> <br/> 
+     
+            <input type="checkbox" name="validationAnnotation" value="validationAnnotation" id="validationAnnotation"  />     
+            <label for="validationAnnotation">comparison with gold standard / human annotations</label><br/> 
+    
+            <input type="checkbox" name="validationCorrelation" value="validationCorrelation" id="validationCorrelation" />     
+            <label for="validationCorrelation">correlation study </label><br/> 
+    
+            <input type="checkbox" name="validationTriangulation" value="validationTriangulation" id="validationTriangulation" />     
+            <label for="validationTriangulation">triangulation with survey data/questionnaiers/... </label><br/> 
+
+            <input type="checkbox" name="validationOther" value="validationOther" id="validationOther" />     
+            <label for="validationOther">other </label><br/> 
+
+            <fieldset class="conditional"> 
+                &nbsp; &nbsp;  &nbsp;<label for="validationOtherText">Describe the validation approach:</label>
+                <input type="text" id="validationOtherText" name="validationOtherText" />
+                <br/><br/>
+            </fieldset>    
+            <input type="checkbox" name="validationNone" value="validationNone" id="validationNone" />     
+            <label for="validationNone">no validation </label><br/>         
+
+        </div>
+
+    </fieldset>
+    <div>
+        <p><b>General comment on the paper (optional):</b></p>
+        <input type="text" size="100", name="generalComment" id="generalComment" /><br/>
+    </div>
+
+    <br/>
+    <div> 
+      <button type="submit" name="saveButton" class="saveButton">Save</button>
+    </div>
+</form>
+    <script type="module" src="./js/app.js"></script>
+  </body>
+</html>
+

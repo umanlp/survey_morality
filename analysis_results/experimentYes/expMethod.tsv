@@ -1,0 +1,10 @@
+method	count
+Fine-tuned transformers	29
+Dictionary-/rule-based	25
+Feature-based ML	18
+LLMs (zero-/few-shot)	14
+NNs with static embeddings	8
+Semi-supervised ML	8
+Logic-based ML 	6
+Unsupervised ML	10
+Reinforcement Learning	2

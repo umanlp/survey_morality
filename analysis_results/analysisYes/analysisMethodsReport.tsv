@@ -1,0 +1,68 @@
+	title	typeAnalysis	experiment	resourcesDict	resourcesOtherText	includesRuleBased	includesLogicBased	includesUnsupervised	includesSupervised	expTransformers	includesLLMPrompt	expLlm
+robertson-etal-2021-covid	A {COVID}-19 news coverage mood map of {E}urope	True	experimentYes	True	--	True	False	True	False	False	False	False
+xie-etal-2019-text	Text-based inference of moral sentiment change	True	experimentYes	True	Historical word embeddings (Hamilton et al. 2016), Global Attitudes survey (Pew Research Center 2013)	False	False	False	True	False	False	False
+fraser-etal-2022-moral	Does Moral Code have a Moral Code? Probing Delphi's Moral Philosophy	False	False	False	The Community, Autonomy, and Divinity Scale (CADS), Oxford Utilitarianism Scale (OUS)	False	False	False	False	False	False	False
+DBLP:conf/icwsm/PriniskiMHMLLB21	Mapping Moral Valence of Tweets Following The Killing of George Floyd	True	experimentNo	True	--	True	False	True	False	False	False	False
+DBLP:conf/icwsm/NguyenLTSCKX22	Mapping Topics in 100, 000 Real-Life Moral Dilemmas	True	experimentNo	True	Empath (Fast et al. 2016)	True	False	False	False	False	False	False
+DBLP:conf/icwsm/WeinzierlH22	"From Hesitancy Framings to Vaccine Hesitancy Profiles: {A} Journey
+of Stance, Ontological Commitments and Moral Foundations"	True	experimentYes	False	--	False	False	False	True	expTransformers	False	False
+zhou-etal-2021-assessing	Assessing Cognitive Linguistic Influences in the Assignment of Blame	True	experimentYes	False	online forum https://reddit.com/ r/AmItheAsshole: collection of first-person descriptions of (purportedly) real-life situations, together with commentary from other users as to who is blameworthy in the situation described	False	False	False	True	False	False	False
+garten2018dictionaries	Dictionaries and distributions: Combining expert knowledge and large scale textual data content analysis: Distributed dictionary representation	False	experimentYes	True	--	False	False	False	True	False	False	False
+10.1016/j.chb.2022.107479	Moral Expressions, Sources, and Frames: Examining COVID-19 Vaccination Posts by Facebook Public Pages	True	experimentNo	True	--	True	False	False	False	False	False	False
+emelin-etal-2021-moral	Moral Stories: Situated Reasoning about Norms, Intents, Actions, and their Consequences	False	experimentYes	False	--	False	False	False	True	expTransformers	True	False
+shahid-etal-2020-detecting	Detecting and understanding moral biases in news	True	experimentYes	False	--	False	False	False	True	False	False	False
+10.1109/BigData.2016.7840889	Quantifying moral foundations from various topics on Twitter conversations	True	experimentNo	True	--	False	False	True	False	False	False	False
+zhang2023moka	MOKA: Moral Knowledge Augmentation for Moral Event Extraction	True	experimentYes	True	Delphi	True	False	False	True	expTransformers	True	expLlm
+10.1007/978-3-031-35995-8_30	A Moral Foundations Dictionary for the European Portuguese Language: The Case of Portuguese Parliamentary Debates	True	experimentNo	True	--	False	False	False	False	False	False	False
+roy-etal-2021-identifying	Identifying Morality Frames in Political Tweets using Relational Learning	True	experimentYes	True	Twitter corpus by Johnson and Goldwasser (2018), Congress of Tweets https://github.com/alexlitel/congresstweets	False	True	False	False	False	False	False
+arora_probing_2023	Probing {Pre}-{Trained} {Language} {Models} for {Cross}-{Cultural} {Differences} in {Values}	False	experimentYes	False	Hofstede’s Cultural Dimensions Survey, World Values Survey 	False	False	False	False	False	True	expLlm
+alizadeh2019psychology	Psychology and morality of political extremists: evidence from Twitter language analysis of alt-right and Antifa	True	experimentNo	True	Southern Poverty Law Center website (SPLC 2018), LIWC lexicon	False	False	False	False	False	False	False
+DBLP:conf/icwsm/GuoBRL22	Emotion Regulation and Dynamics of Moral Concerns During the Early COVID-19 Pandemic	True	experimentYes	True	FrameAxis	True	False	False	False	False	False	False
+mooijman2018moralization	Moralization in social networks and the emergence of violence during protests	True	experimentYes	True	--	False	False	False	True	False	False	False
+10.1109/BigData.2017.8258402	Understanding rating behavior based on moral foundations: The case of Yelp reviews	True	experimentNo	True	Yelp Dataset Challenge Round 10	False	False	False	False	False	False	False
+karami2023Persian	A transformer-based deep learning model for Persian moral sentiment analysis	True	experimentYes	True	--	True	False	False	True	expTransformers	False	False
+stede2023framing	Framing climate change in Nature and Science editorials: applications of supervised and unsupervised text categorization	False	False	False	NatSciEdCC: Nature and Science editorials on climate change	False	False	True	True	False	False	False
+10.1007/978-3-031-40878-6_6	The Quarrel of Local Post-Hoc Explainers for Moral Values Classification in Natural Language Processing	False	experimentYes	True	--	False	False	False	True	expTransformers	False	False
+10.1007/s10606-019-09357-w	Moral and Affective Differences in U.S. Immigration Policy Debate on Twitter	True	experimentNo	True	LIWC	True	False	False	False	False	False	False
+10.1145/3544548.3580834	Moral Framing of Mental Health Discourse and Its Relationship to Stigma: A Comparison of Social Media and News	True	experimentNo	True	BBC News dataset (Greene and Cunningham 2006), AG News classification dataset (Zhang et al. 2015), MIND dataset (Wu et al. 2020), News Aggregator dataset (Dua and Graff 2017), All the news 2.0 dataset (Thompson 2020), Havard Dataverse dataset (Kulkarni 2018), WordNet	False	False	False	False	False	False	False
+10.1145/3524458.3547264	LibertyMFD: A Lexicon to Assess the Moral Foundation of Liberty.	True	experimentYes	True	Facebook posts annotated with MFT values (Prado et al., 2022)	False	False	True	True	False	False	False
+10.1145/3465336.3475112	Incorporating the Measurement of Moral Foundations Theory into Analyzing Stances on Controversial Topics	True	experimentNo	True	--	True	False	False	False	False	False	False
+DBLP:conf/icwsm/DiakopoulosZES14	Identifying and Analyzing Moral Evaluation Frames in Climate Change Blog Discourse	True	experimentNo	True	False	True	False	False	False	False	False	False
+mahajan-shaikh-2020-studying	Studying The Effect of Emotional and Moral Language on Information Contagion during the Charlottesville Event	True	experimentNo	True	--	False	False	False	False	False	False	False
+kiesel-etal-2022-identifying	Identifying the Human Values behind Arguments	True	experimentYes	False	IBM-ArgQ-Rank-30kArgs dataset (Gretz et al., 2020)	False	False	False	True	expTransformers	False	False
+lee-goldwasser-2022-towards	Towards Explaining Subjective Ground of Individuals on Social Media	True	experimentYes	True	--	False	False	True	False	False	False	False
+takikawa2017moral	Moral Foundations of Political Discourse: Comparative Analysis of the Speech Records of the US Congress and the Japanese Diet	True	experimentNo	True	--	True	False	False	False	False	False	False
+10.1145/3543507.3583865	Moral Narratives Around the Vaccination Debate on Facebook	True	experimentYes	False	New dataset of Facebook comments, annotated for stance and MFs	False	False	False	True	False	False	False
+garten2016morality	Morality between the lines: Detecting moral sentiment in text	True	experimentYes	True	--	True	False	False	True	False	False	False
+10.1145/3184558.3188728	Misleading or Falsification: Inferring Deceptive Strategies and Types in Online News and Social Media	True	experimentNo	False	Disinformation dataset https://euvsdisinfo.eu/	False	False	False	False	False	False	False
+simmons-2023-moral	Moral Mimicry: Large Language Models Produce Moral Rationalizations Tailored to Political Identity	False	experimentYes	True	--	False	False	False	False	False	True	expLlm
+10.1145/3311957.3359496	How Do Moral Values Differ in Tweets on Social Movements?	True	experimentNo	True	--	False	False	False	False	False	False	False
+10.1007/978-3-030-60975-7_16	Moral Framing and Ideological Bias of News	True	experimentYes	True	FrameAxis	False	False	True	True	expTransformers	False	False
+10.1177/0894439313506837	Measuring Moral Rhetoric in Text	True	experimentNo	True	"The New York Times annotated corpus (Sanhaus 2008), corpus of blog posts from Deghani et al. 2014 ""Analyzing political rhetoric in conservative and liberal weblogs related to the construction of the “ground zero mosque”"", transcripts of US Senate speeches (Yu et al 2008)"	False	False	False	False	False	False	False
+DBLP:conf/icwsm/MejovaKM23	Authority without Care: Moral Values behind the Mask Mandate Response	True	experimentNo	False	--	True	False	False	False	False	False	False
+DBLP:conf/icwsm/Reiter-HaasKL21	Studying Moral-based Differences in the Framing of Political Tweets	True	experimentYes	True	--	False	False	False	True	False	False	False
+DBLP:conf/icwsm/SolansTFKH0K21	"Learning to Classify Morals and Conventions: Artificial Intelligence
+in Terms of the Economics of Convention"	False	experimentYes	False	--	False	False	False	True	False	False	False
+10.1155/2022/7868591	The Acceptance Status of Traditional Moral Culture in Colleges and Universities Using Convolutional Neural Network	True	experimentYes	False	None	False	False	False	True	expTransformers	False	False
+fulgoni-etal-2016-empirical	An Empirical Exploration of Moral Foundations Theory in Partisan News Sources	True	experimentNo	True	--	False	False	False	False	False	False	False
+dehghani2017tacit	TACIT: An open-source text analysis, crawling, and interpretation tool	False	experimentNo	True	--	False	False	False	False	False	False	False
+10.1145/3511095.3531269	Learning to Adapt Domain Shifts of Moral Values via Instance Weighting	True	experimentYes	False	--	False	False	False	True	expTransformers	False	False
+xu2023tracking	Tracking moral divergence with DDR in presidential debates over 60 years	True	experimentNo	True	--	True	False	False	False	False	False	False
+matsuo2019development	Development and validation of the Japanese Moral Foundations Dictionary	False	experimentNo	True	--	False	False	False	False	False	False	False
+10.1109/ASONAM49781.2020.9381386	Do Bots Have Moral Judgement? The Difference between Bots and Humans in Moral Rhetoric	False	experimentYes	True	--	True	False	True	False	False	False	False
+hulpus-etal-2020-knowledge	Knowledge Graphs meet Moral Values	False	False	True	--	False	False	False	True	False	False	False
+10.1109/BigData55660.2022.10021123	Understanding COVID-19 Vaccine Campaign on Facebook using Minimal Supervision	True	experimentYes	True	--	True	False	True	True	expTransformers	False	False
+kobbe-etal-2020-exploring	Exploring Morality in Argumentation	False	experimentYes	False	Wordsense-disambiguated MFD (Hulpus et al), Dagstuhl ArgQuality Corpus (Wachmuth et al)	False	False	False	True	expTransformers	False	False
+10.1145/2858036.2858423	Gender and Ideology in the Spread of Anti-Abortion Policy	True	experimentYes	True	LIWC	True	False	False	False	False	False	False
+wu-etal-2023-cross	Cross-Cultural Analysis of Human Values, Morals, and Biases in Folk Tales	True	experimentNo	True	--	True	False	False	False	False	False	False
+hofmann-etal-2022-modeling	Modeling Ideological Salience and Framing in Polarized Online Groups with Graph Neural Networks and Structured Sparsity	True	experimentYes	True	Reddit Politosphere (Hofmann et al. 2022), DW-NOMINATE scores (Lewis et al. 2021)	False	False	True	False	False	False	False
+10.1109/ASONAM.2018.8508244	Acquiring Background Knowledge to Improve Moral Value Prediction	False	experimentYes	True	--	True	False	False	False	False	False	False
+10.1109/AI4G50087.2020.9311054	Building Ethical AI from News Articles	False	experimentYes	False	--	False	False	True	False	False	False	False
+rizzoli2023	The risk co-de model: detecting psychosocial processes of risk perception in natural language through machine learning	True	experimentYes	False	--	False	False	False	True	False	False	False
+ertugrul2019activism	Activism via attention: interpretable spatiotemporal learning to forecast protest activities	False	experimentYes	True	Tweets on protest movements (BLM: Charllottesville, Ferguson)	True	False	False	True	False	False	False
+pyatkin-etal-2023-clarifydelphi	ClarifyDelphi: Reinforced Clarification Questions with Defeasibility Rewards for Social and Moral Situations	False	experimentYes	False	COMMONSENSE NORM BANK (Jiang et al., 2022)	False	False	False	True	False	False	False
+10.1109/SmartCity.2015.122	Variations of Social Psychology of Russian Society in Last 100 Years	True	experimentNo	False	Google N-Grams	False	False	False	False	False	False	False
+rao-etal-2023-ethical	Ethical Reasoning over Moral Alignment: A Case and Framework for In-Context Ethical Policies in LLMs	False	experimentYes	False	--	False	False	False	False	False	True	expLlm
+dehghani2014analyzing	Analyzing political rhetoric in conservative and liberal weblogs related to the construction of the “ground zero mosque”	True	experimentYes	True	--	False	False	True	False	False	False	False
+johnson-goldwasser-2019-modeling	Modeling Behavioral Aspects of Social Media Discourse for Moral Classification	True	experimentYes	True	Twitter corpus by Johnson and Goldwasser (2018), Congress of Tweets https://github.com/alexlitel/congresstweets	False	True	True	False	False	False	False
+roy-goldwasser-2021-analysis	Analysis of Nuanced Stances and Sentiment Towards Entities of US Politicians through the Lens of Moral Foundation Theory	True	experimentYes	False	 Congressional Tweets Dataset (Johnson et al., 2017)	False	True	False	False	False	False	False
